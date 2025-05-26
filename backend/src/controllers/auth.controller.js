@@ -116,3 +116,15 @@ export const checkAuth = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
+export const loginUser = async (req, res) => {
+  const { username, password } = req.body;
+  // Implement your authentication logic here
+  // For example, check the username and password against your database
+
+  // If successful:
+  res.json({ message: 'Login successful', user: { username } });
+
+  // If failed:
+  // res.status(401).json({ message: 'Invalid credentials' });
+};
